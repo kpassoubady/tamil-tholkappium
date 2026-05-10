@@ -43,16 +43,22 @@ Rules:
 
 ## Workflow: adding a new book
 
-1. **Pick the next number.** Use the lowest unused `NN` (currently next is `41`).
+1. **Pick the next number.** Use the lowest unused `NN` (currently next is `43`).
 2. **Build the filename** per the naming convention above.
-3. **Upload to the release**:
+3. **Upload to the release** (asset keeps its source filename):
    ```sh
-   gh release upload v1.0.0 /path/to/local.pdf --repo kpassoubady/tamil-tholkappium \
-     --clobber --name "thol_book_41-<slug>.pdf"
+   gh release upload v1.0.0 /path/to/local.pdf --repo kpassoubady/tamil-tholkappium
    ```
-   `--name` renames during upload; `--clobber` lets you re-upload if a same-named asset exists.
-4. **Add it to `README.md`** under the correct section (Ezhuthadhikaram / Solladhikaram / Poruladhikaram / General / Research). Link text should be the Tamil title (with optional English qualifier in parentheses).
-5. **Verify the download URL** by clicking the link or `curl -IL` against it.
+   Note: `FILE#DISPLAY_NAME` syntax and `--name` do **not** rename the asset on the gh versions we've tested (asset uploads with its on-disk filename regardless). Don't rely on them — rename via API in the next step.
+4. **Rename to the `thol_book_NN-<slug>.pdf` name** using the GitHub API. First get the asset ID, then PATCH it:
+   ```sh
+   ASSET_ID=$(gh release view v1.0.0 --repo kpassoubady/tamil-tholkappium \
+     --json assets --jq '.assets[] | select(.name=="local.pdf") | .id')
+   gh api -X PATCH /repos/kpassoubady/tamil-tholkappium/releases/assets/$ASSET_ID \
+     -f name=thol_book_NN-<slug>.pdf
+   ```
+5. **Add it to `README.md`** under the correct section (Ezhuthadhikaram / Solladhikaram / Poruladhikaram / General / Research). Link text should be the Tamil title (with optional English qualifier in parentheses).
+6. **Verify the download URL** with `curl -sIL -o /dev/null -w "%{http_code}\n" <url>` — expect `200`. New uploads may briefly 404 while the CDN propagates; wait ~30s and retry before assuming failure.
 
 ## Workflow: renaming a release asset
 
