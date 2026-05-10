@@ -1,1 +1,4 @@
 .DS_Store
+
+# PDFs live in GitHub Releases, not in the repo.
+*.pdf
