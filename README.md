@@ -64,11 +64,13 @@ This repository contains a vast collection of Tolkappiyam-related books, comment
 - [தொல்காப்பிய இலக்கிய இயல்](https://github.com/kpassoubady/tamil-tholkappium/releases/download/v1.0.0/thol_book_27-ilakkiya-iyal.pdf)
 - [தொல்காப்பியம் - 3825 சூத்திரங்கள்](https://github.com/kpassoubady/tamil-tholkappium/releases/download/v1.0.0/thol_book_02-tholkappiyam-3825-sutras.pdf)
 - [தொல்காப்பியர் விளக்கம் (திருமணப் பொருத்தம்)](https://github.com/kpassoubady/tamil-tholkappium/releases/download/v1.0.0/thol_book_38-thirumana-poruththam.pdf)
+- [தொல்காப்பியம் (1961) - புலியூர் கேசிகன் பதிப்பு](https://github.com/kpassoubady/tamil-tholkappium/releases/download/v1.0.0/thol_book_41-tholkappiyam-1961-puliyoor-kesigan-edition.pdf)
 
 ### 5. Research & Other Resources (ஆராய்ச்சி மற்றும் பிற சான்றுகள்)
 - [தொல்காப்பிய ஆய்வு நுணுக்கங்கள் (Tamil Studies Journal)](https://github.com/kpassoubady/tamil-tholkappium/releases/download/v1.0.0/thol_book_26-aaivu-nunukkangal-tamil-studies.pdf)
 - [வள்ளலார்: ஒற்றியிலே ஒரு நாள் (தொடர்புடைய நூல்)](https://github.com/kpassoubady/tamil-tholkappium/releases/download/v1.0.0/thol_book_15-vallalar-otriyile-oru-naal.pdf)
 - [தொல்காப்பியர் குறித்த தகவல்](https://github.com/kpassoubady/tamil-tholkappium/releases/download/v1.0.0/thol_book_22-tholkappiyar-info-pm0100.pdf)
+- [இந்திய இலக்கிய சிற்பிகள்: தொல்காப்பியர் - தமிழண்ணல் (2001)](https://github.com/kpassoubady/tamil-tholkappium/releases/download/v1.0.0/thol_book_42-india-ilakiya-sirpigal-tholkappiyar-thamizhannal-2001.pdf)
 
 ---
 
